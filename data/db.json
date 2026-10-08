@@ -1,0 +1,31 @@
+{
+  "tapti": {
+    "profile": {
+      "name": "Tapti",
+      "age": "18",
+      "traits": [
+        "I start ten things and finish two",
+        "I want results now, not later",
+        "I get bored fast",
+        "It has to be perfect or I stall",
+        "Big dreams, no plan",
+        "Rewards move me",
+        "I live in my head"
+      ],
+      "theme": "dreamer",
+      "mode": "iron"
+    },
+    "tasks": [],
+    "goals": [],
+    "rewards": [
+      "Watch one episode, guilt free",
+      "A movie tonight",
+      "30 minutes of shopping",
+      "Coffee outside",
+      "One hour of gaming"
+    ],
+    "wallet": [],
+    "slips": 5,
+    "date": "Thu Oct 08 2026"
+  }
+}

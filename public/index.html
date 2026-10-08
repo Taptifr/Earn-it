@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Earn It</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;800&family=Fraunces:ital,wght@1,800&family=Bowlby+One&family=Instrument+Serif&family=Caprasimo&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-theme="dreamer" data-mode="strict">
+
+<main id="s-intro" class="screen">
+  <h1>Sign the deal with yourself.</h1>
+  <p class="lede">Tell me who you are. The whole site will reshape around you.</p>
+  <div class="row">
+    <label>Your name<input id="in-name" autocomplete="off" placeholder="Tapti"></label>
+    <label>Age<input id="in-age" type="number" min="5" max="99" placeholder="24"></label>
+  </div>
+  <p class="q">Which of these sound like you? Tap all that do.</p>
+  <div id="traits" class="chips"></div>
+  <p id="read" class="read">Pick a few and I'll read you.</p>
+  <div class="row">
+    <button id="go-strict" class="big">Build my site</button>
+    <button id="load" class="ghost">I already signed. Load my profile</button>
+  </div>
+  <p id="intro-err" class="err"></p>
+</main>
+
+<main id="s-strict" class="screen" hidden>
+  <h1>How hard should I push?</h1>
+  <p class="lede">You can change this later, but not mid-session.</p>
+  <div id="modes" class="modes"></div>
+</main>
+
+<main id="s-home" class="screen" hidden>
+  <header>
+    <div><span id="hi" class="hi"></span><button id="chg" class="ghost small">change strictness</button></div>
+    <div class="stats"><span id="mode-badge" class="badge"></span><span id="slips" class="badge"></span></div>
+  </header>
+
+  <section id="now" class="now"></section>
+
+  <div class="cols">
+    <section>
+      <h2>Today</h2>
+      <form id="f-task" class="add"><input id="t-in" placeholder="What are you doing today?" required><button>Add task</button></form>
+      <ul id="tasks" class="list"></ul>
+    </section>
+    <section>
+      <h2>The long game</h2>
+      <p class="hint">Real goals need 2 to 3 focused hours a day. Set the daily quota and start a session.</p>
+      <form id="f-goal" class="add">
+        <input id="g-in" placeholder="Goal, e.g. Launch my app" required>
+        <select id="g-t"><option value="120">2h / day</option><option value="150" selected>2.5h / day</option><option value="180">3h / day</option></select>
+        <button>Add goal</button>
+      </form>
+      <div id="goals"></div>
+    </section>
+  </div>
+
+  <div class="cols">
+    <section>
+      <h2>Your coupons</h2>
+      <p class="hint">Every win drops one. Redeem it for real.</p>
+      <div id="wallet" class="wallet"></div>
+    </section>
+    <section>
+      <h2>Reward menu</h2>
+      <p class="hint">Winners are drawn from this list. Make it tempting.</p>
+      <form id="f-rw" class="add"><input id="r-in" placeholder="e.g. One episode, guilt free" required><button>Add reward</button></form>
+      <ul id="rewards" class="list"></ul>
+    </section>
+  </div>
+</main>
+
+<div id="lock" class="lock" hidden>
+  <p id="lk-mode" class="hint"></p>
+  <h2 id="lk-label"></h2>
+  <div id="lk-time" class="time">00:00</div>
+  <p id="lk-msg" class="hint">Stay on this tab. Nothing else exists right now.</p>
+  <button id="lk-done" class="big" hidden>Close session</button>
+  <button id="lk-quit" class="ghost small">Quit (costs a slip)</button>
+</div>
+
+<dialog id="tk"></dialog>
+<div id="toast" class="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>
